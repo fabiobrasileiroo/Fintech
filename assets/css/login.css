@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: rgb(16, 18, 24);
+  --secondary-color: rgb(29, 86, 202); 
+  --background-color: rgb(26, 32, 44);
+  
+  --body-font: 'Inter', sans-serif;
+  --heading-font: Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+body {
+  background: #181A20;
+  width: 97vw;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.name-pig-logo {
+  color: white;
+  font-weight: 800;
+  font-family: var(--body-font);
+}
+
+.botao-voltar {
+  font-family: var(--body-font);
+  color: #FFF;
+  font-weight: 1000;
+  padding: 10px 20px 10px 20px;
+  border: solid 1px rgb(31, 196, 173);  
+  border-radius: 15px;
+  margin-right: 100px;  
+  text-shadow: white;
+  box-shadow: 0 0 20px rgba(31, 196, 173, 0.075);
+}
+
+.botao-voltar:hover {
+  background-color: rgba(31, 196, 174, 0.5);
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  padding: 50px;
+  background-color: #101218;
+}
+
+
+.titulo {
+  display: flex;
+  gap: 10px;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #AFB6C2;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+form label {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.lbsenha {
+  margin-top: 20px;
+}
+
+form section {
+  display: flex;
+  gap: 3px;
+  border: 1px solid #AFB6C2;
+  border-radius: 3px;
+  padding: 10px;
+  height: 44px;
+}
+
+form section:focus-within {
+  border: 2px solid #FFC632;
+}
+
+form section:hover {
+  border: 2px solid #FFC632;
+}
+
+input {
+  color: #9D9E9E;
+}
+
+input::placeholder {
+  color: #9D9E9E;
+}
+
+section .input{
+  margin-left: 30px;
+  background-color: transparent;
+  color: #afb6c2;
+  width: 80%;
+  border: none;
+}
+
+section .input:focus{
+  outline: none;
+}
+
+.email{
+  background-image: url(../images/mail.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 11px;
+}
+
+.senha{
+  background-image: url(../images/lock.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 11px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.checkbox div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.lembre-me p {
+  color: #DADADA;
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.esqueci p {
+  color: #DADADA;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  width: 100%;
+
+  border: 5px solid #1D56CA;
+  background: #1D56CA;
+
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: Poppins;
+  font-weight: 600;
+  letter-spacing: 0.27px;
+  text-transform: uppercase;
+}
+
+.botao {
+  margin-top: 20px;
+}
+
+button{
+  color: #ECEBEB;
+}
+
+.registre {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.registre strong {
+  color: #2D72FD;
+}
+
+.registre p {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: Poppins;
+}
+
+@media screen and (min-width:600px){
+  .container{
+      margin: 50px auto;
+      width: 500px;
+  }
+
+  .login {
+    /* height: 55vh; */
+    height: 100%;
+    border-radius: 10px;
+  }
+}
+
+
+/*
+.container-login {
+    width: 49vw; 
+}
+
+.container {
+    background-color: var(--primary-color);
+    width: 572px;
+    height: 512px;
+    margin-left: 74px;
+    border-radius: 4px;
+}
+
+.titulo h1{
+    text-align: center;
+
+}
+
+.logo {
+    margin:50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo span p{
+    font-weight: 1000; 
+}
+.info {
+    text-align: center;
+    margin-top: 0px;
+}
+form {
+}
+.center-c {
+}
+.email-right , .senha-right{
+    margin-left: 117px;
+    font-weight: 600;
+}
+.email, .senha{
+    text-align: center;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row-reverse;
+}
+.input {
+    border: 1px solid #999; 
+    border-radius: 5px;
+    background-color: transparent;
+    padding:10px;
+    padding-right: 115px;
+    
+}
+
+.checkbox {
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+}
+.checkbox p {
+    font-weight: 300;
+}
+
+/* não conseguir deixar transparente igual do figman*/
+/*
+input[type="checkbox"] {
+  border: 1px solid #999; 
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px;  
+}
+
+.lembre-me, .esqueci {
+    display: flex;
+    margin-right: 10px; /* Adiciona um espaçamento entre os elementos */
+/*
+}
+
+
+.esqueci a {
+   text-decoration: none;
+    color: white;
+    margin-left: 54px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.botao button {
+    background-color: var(--secondary-color);
+    width: 334px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 100px 10px 100px;
+    border: none;
+    border-radius: 5px;
+}
+
+.botao {
+    text-align: center;
+}
+.registre {
+    text-align: center;
+    font-weight: 300;
+}
+.registre a{
+    text-decoration: none;
+    color: white;
+}
+.registre a strong {
+    color: rgb(29, 86, 202);
+}
+.imagem-direita {
+    width: 47.9vw;
+    height: 100vh;
+    margin-left:50px ;
+}
+
+.teste {
+    display: flex;
+}
+
+.imagem {
+    width: 49vw;
+} */

@@ -1,0 +1,12 @@
+main {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr 10fr ;
+  padding: 1.8rem 2.5rem;
+  width: 100%;
+  border: red 1px solid;
+}
+
+/* main div {
+    border: red 1px solid;
+    display: ;
+} */

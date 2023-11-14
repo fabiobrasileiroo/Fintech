@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Roboto:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #101218;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+  background-color: #101218;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  color: #AFB6C2;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+form label {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.lbsenha {
+  margin-top: 20px;
+}
+
+form section {
+  display: flex;
+  gap: 3px;
+  border: 1px solid #AFB6C2;
+  border-radius: 3px;
+  padding: 10px;
+  height: 44px;
+}
+
+form section:focus-within {
+  border: 2px solid #FFC632;
+}
+
+form section:hover {
+  border: 2px solid #FFC632;
+}
+
+input {
+  color: #9D9E9E;
+}
+
+input::placeholder {
+  color: #9D9E9E;
+}
+
+section .input {
+  margin-left: 30px;
+  background-color: transparent;
+  color: #AFB6C2;
+  width: 80%;
+  border: none;
+}
+
+section .input:focus {
+  outline: none;
+}
+
+.profile {
+  background-image: url(../images/profile.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 9px;
+}
+
+.email {
+  background-image: url(../images/mail.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 11px;
+}
+
+.senha {
+  background-image: url(../images/lock.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 11px;
+}
+
+.data {
+  background-image: url(../images/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 9px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.concordo p {
+  color: #DADADA;
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.esqueci p {
+  color: #DADADA;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  width: 100%;
+
+  border: 5px solid #1D56CA;
+  background: #1D56CA;
+
+  border-radius: 4px;
+  font-size: 18px;
+  font-family: Poppins;
+  font-weight: 600;
+  letter-spacing: 0.27px;
+  text-transform: uppercase;
+}
+
+.botao {
+  margin-top: 20px;
+}
+
+button {
+  color: #ECEBEB;
+}
+
+.registre {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.registre strong {
+  color: #2D72FD;
+}
+
+.registre p {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-family: Poppins;
+}
+
+/* Oculta o símbolo do calendário em navegadores baseados em WebKit */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Oculta o símbolo do calendário em navegadores baseados em Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+/* Oculta o símbolo do calendário em navegadores baseados em Edge e IE */
+input[type="date"]::-ms-calendar-picker-indicator {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    width: 100vw;
+    height: 100%;
+    background: #181A20;
+  }
+
+  .container {
+    margin: 50px auto 0px;
+    width: 500px;
+  }
+
+  .login {
+    height: 100%;
+  }
+}
+/* Seus estilos existentes... */
+
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+}
+
+.login-form {
+  flex: 1;
+  padding: 50px;
+  background-color: #101218;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+}

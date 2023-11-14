@@ -1,0 +1,451 @@
+.content-main {
+    background-color: rgb(25, 25, 25);
+    margin-top:81px;
+    
+}
+
+.content-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.conta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.text-content {
+  padding: 20px;
+  color: #fff;
+}
+
+.titulo-texto-lading-page {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.lading-page-descricao-texto {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.bottom1 {
+  padding: 10px 20px;
+  background-color: #FFF;
+  color: #FFF;
+  border-radius: 5px;
+  margin-right: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+.bottom2 {
+  padding: 10px 20px;
+  background-color: rgb(25, 25, 25) ;
+  color: #FFF;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  margin-right: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.bottom1 a {
+    color: #000;
+    text-decoration: none;
+}
+.bottom2 a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.image-content {
+  text-align: right;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+}
+.images-content {
+  background-color: rgb(155, 155, 155);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-content: center; /* Centralize as imagens horizontalmente */
+  text-align: center; /* Centralize o texto no centro */
+}
+
+.images-content img {
+  display: flex;
+  
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+/*erro ta aqui*/
+.funcionalidades {
+  background-image: url(./../images/Map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column; /* Configuração para uma coluna */
+  align-items: center; /* Alinhar horizontalmente no centro */
+}
+
+.text-funcionalidades {
+  padding: 20px;
+  width: 50% ;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around; /* Espaçamento igual entre os cartões */
+  margin-top: 25px ;
+
+}
+
+.card-1, .card-2, .card-3 {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Estilos gerais para telas maiores que 992px */
+/* Estilos gerais para telas maiores que 768px */
+.mul-funcionalidades {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.image-container img{
+  width: 80%;
+}
+.mul-conteiner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.mul-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.mul-card {
+  border: 1px solid #ccc; /* Adicione bordas aos cards */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px; /* Defina a largura desejada para os cards */
+}
+
+/* Estilos específicos para telas menores que 992px */
+@media (max-width: 992px) {
+  .mul-conteiner {
+    flex-direction: column; /* Altera para uma coluna quando a tela for menor */
+    align-items: center; /* Centraliza os elementos na coluna */
+  }
+
+  .mul-card {
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
+}
+/* Estilos específicos para telas menores que 768px */
+@media (max-width: 768px) {
+  .mul-funcionalidades {
+    align-items: center; /* Centraliza os elementos na coluna */
+  }
+
+  .mul-card {
+    width: 80vw; /* Ocupa toda a largura disponível */
+  }
+  .image-container img {
+  }
+}
+@media (max-width: 576px) {
+  .mul-funcionalidades {
+    align-items: center; /* Centraliza os elementos na coluna */
+  }
+
+  .mul-card {
+    width: 80vw; /* Ocupa toda a largura disponível */
+  }
+}
+
+
+@media (max-width: 992px) {
+  .conta {
+    grid-template-columns: 1fr;
+  }
+
+  .image-content {
+    text-align: center;
+  }
+}
+
+.imagem-business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px ;
+  margin-bottom: 25px;
+}
+.imagem-business img {
+  width: 60%;
+
+}
+@media (max-width: 1144px) {
+  .imagem-business img {
+    width: 75%;
+  }
+}
+
+.feedback {
+  background-color: rgb(231, 230, 230);
+}
+ .feedback {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0; /* Cor de fundo para a div feedback */
+      padding: 20px; /* Espaçamento interno */
+    }
+
+    .feedback-img {
+      flex: 0 0 auto; /* A imagem não deve crescer ou encolher */
+      margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    }
+
+    .feedback-img img {
+      max-width: 100%;
+      height: auto;
+      display: block; /* Remove o espaço extra abaixo da imagem */
+    }
+
+    .feedback-text {
+      flex: 1; /* O texto deve ocupar todo o espaço disponível */
+    }
+
+    .feedback-text h3 {
+      margin: 0;
+
+      font-size: 1.8em; /* Tamanho do texto do título */
+    }
+
+    .feedback-text-light {
+      color: #888;
+      font-size: 0.8em; /* Tamanho do texto leve */
+    }
+
+    .feedback-text-bold {
+      font-weight: 400;
+      font-size: 1em; /* Tamanho do texto em negrito */
+      padding-top: 10px;
+      padding-left: 10px ;
+    }
+    
+.faq-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+.faq-container .faq-pergunta {
+  margin: 10px;
+  font-size: 2.0rem;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Adiciona uma linha na parte inferior */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none; /* Remove a borda superior nas respostas */
+  border-radius: 0 0 5px 5px; /* Adiciona borda arredondada na parte inferior das respostas */
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+/*rodape */
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+footer {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+    margin-top:50px ;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #242121;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.logo-footer {
+    margin-bottom: 10px ;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: rgb(231, 230, 230);
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+    color: black;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+ 
