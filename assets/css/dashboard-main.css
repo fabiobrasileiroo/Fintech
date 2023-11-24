@@ -356,6 +356,7 @@ main section.middle .cards .card {
     justify-content: space-between;
     box-shadow: 0 2rem 3rem var(--color-danger-light);
     transition: all 300ms ease;
+    min-width: 24rem;
 }
 
 main section.middle .cards .card:hover {
@@ -364,7 +365,7 @@ main section.middle .cards .card:hover {
 
 main section.middle .cards .card:nth-child(2) {
     background: linear-gradient(#7f8191,#27282f);
-    box-shadow: 0 2 3rem rgba(0,0,0, 0.2);
+    box-shadow: 0 2rem 3rem rgba(0,0,0, 0.25);
 }
 
 main section.middle .cards .card:nth-child(3) {
@@ -436,4 +437,104 @@ main .monthly-report {
 main .monthly-report h1 {
     font-weight: 700;
     font-size: 1.8rem;
+}
+/*======= FAST PAYMENT ======== */
+
+main .fast-payment {
+    margin-top: 2rem;
+    display: flex;
+    align-self: center;
+    gap: 2rem;
+}
+
+main .fast-payment .badges {
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+}
+
+main .fast-payment .badge span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+} 
+
+main .fast-payment .badge { 
+    padding: 0.6rem var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--border-radius-2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main .fast-payment .badge:hover {
+    box-shadow: 0 0 1.5rem var(--color-primary-light);
+    cursor: pointer;
+}
+
+main .fast-payment .badge:first-child span {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: fit-content;
+    font-size: 1.5rem;
+}
+
+main .fast-payment .badge div {
+    display: flex;
+    gap: 2rem;
+    align-self: center;
+}
+/*================= CANVAS ===============*/
+
+canvas#chart {
+    background: var(--color-white);
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+/* ================== INVESTMENTS ======================= */
+
+main section.right .investments  {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+main section.right .investments img {
+    width: 2.4rem;
+}
+main section.right .investments .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--card-padding);
+    padding-bottom: 0;
+}
+
+main section.right .investments .header a {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+}
+
+main section.right .investments .investments{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--card-padding);
+    border: 1px solid var(--color-light);
+}
+
+main section.right .investments .investments:last-child {
+    border: none;
+}
+
+main section.right .investments .investments:hover  {
+    background: var();
 }

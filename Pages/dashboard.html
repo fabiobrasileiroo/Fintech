@@ -13,7 +13,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- STYLESHEET-->
     <link rel="stylesheet" href="../assets/css/dashboard-main.css">
-    <!--teste-->
 </head>
 <body>
     <nav>
@@ -254,42 +253,42 @@
                         <span class="material-symbols-outlined">add</span>
                     </div>
                     <div class="badge">
-                        <span class="bg-primary"></span>
+                        <span class="bg-success"></span>
+                        <div>
+                            <h5>Eletricidade</h5>
+                            <h4>$150</h4>
+                        </div>
+                    </div>
+                     <div class="badge">
+                        <span class="bg-success"></span>
                         <div>
                             <h5>Treinamento</h5>
                             <h4>$50</h4>
                         </div>
                     </div>
                      <div class="badge">
-                        <span class="bg-primary"></span>
+                        <span class="bg-danger"></span>
                         <div>
-                            <h5>Treinamento</h5>
-                            <h4>$50</h4>
+                            <h5>Comida</h5>
+                            <h4>$299</h4>
                         </div>
                     </div>
                      <div class="badge">
-                        <span class="bg-primary"></span>
+                        <span class="bg-success"></span>
                         <div>
-                            <h5>Treinamento</h5>
-                            <h4>$50</h4>
+                            <h5>Agua</h5>
+                            <h4>$99</h4>
                         </div>
                     </div>
                      <div class="badge">
-                        <span class="bg-primary"></span>
-                        <div>
-                            <h5></h5>
-                            <h4>$50</h4>
-                        </div>
-                    </div>
-                     <div class="badge">
-                        <span class="bg-primary"></span>
+                        <span class="bg-success"></span>
                         <div>
                             <h5>Educação</h5>
                             <h4>$999</h4>
                         </div>
                     </div>
                      <div class="badge">
-                        <span class="bg-primary"></span>
+                        <span class="bg-danger"></span>
                         <div>
                             <h5>Internet</h5>
                             <h4>$100</h4>
@@ -303,7 +302,7 @@
                         </div>
                     </div>
                      <div class="badge">
-                        <span class="bg-primary"></span>
+                        <span class="bg-danger"></span>
                         <div>
                             <h5>Netflix</h5>
                             <h4>$35</h4>
@@ -315,15 +314,93 @@
             </div>
 
             <!-- END OF FAST PAYMENT-->
+            <canvas id="chart"></canvas>
         </section>
         <!-- END OF MIDDLE -->
 
         <section class="right">
-
+            <div class="investments">
+                <div class="header">
+                    <h1>Investments</h1>
+                    <a href="#">Mais <span class="material-symbols-outlined">chevron_right</span></a>
+                </div>
+                <div class="investment">
+                    <img src="../assets/imageDashbord/images/uniliver.png" >
+                    <h4>Uniliver</h4>
+                    <div class="date-time">
+                        <p> 7 Dec, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small  class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$20,003</h4>
+                        <small class="danger">-4.27%</small>
+                    </div>
+                </div>
+                <!-- END INVESTMENT-->
+                 <div class="investment">
+                    <img src="../assets/imageDashbord/images/tesla.png" >
+                    <h4>Tesla</h4>
+                    <div class="date-time">
+                        <p> 20 Dec, 2023</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>5377</p>
+                        <small  class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$720,110</h4>
+                        <small class="success">+38,27</small>
+                    </div>
+                </div>
+                <!-- END  INVESTMENT-->
+                 <div class="investment">
+                    <img src="../assets/imageDashbord/images/monster.png" >
+                    <h4>Monster</h4>
+                    <div class="date-time">
+                        <p>20 Dec, 2023</p>
+                        <small class="text-muted">3:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>700</p>
+                        <small  class="text-muted">McDonalds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$78,003</h4>
+                        <small class="danger">-1.02%</small>
+                    </div>
+                </div>
+                <!-- END INVESTMENT-->
+                 <div class="investment">
+                    <img src="../assets/imageDashbord/images/mcdonalds.png" >
+                    <h4>Uniliver</h4>
+                    <div class="date-time">
+                        <p>7 Nov, 2021</p>
+                        <small class="text-muted">9:14pm</small>
+                    </div>
+                    <div class="bonds">
+                        <p>1402</p>
+                        <small  class="text-muted">Bonds</small>
+                    </div>
+                    <div class="amount">
+                        <h4>$20,003</h4>
+                        <small class="danger">-4.27%</small>
+                    </div>
+                </div>
+                <!-- END INVESTMENT-->
+            </div>
         </section>
         <!-- END OF RIGHT -->
     </main>
     <!-- ==================END OF ASIDE==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <!-- END CHART.JS-->
+
+    <script src="../assets/scripts/main.js"></script>
 </body>
 </html>
 <!--1:01:37 minutos eu parei-->
