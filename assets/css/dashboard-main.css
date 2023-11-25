@@ -631,7 +631,7 @@ main .recent-transactions .card-details .card {
 
 /* ================= MEDIA QUERIES FOR TABLETS ================*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1524px) {
     nav .search-bar {
         display: none;
     }
