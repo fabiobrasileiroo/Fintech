@@ -733,3 +733,6 @@ main .recent-transactions .card-details .card {
         gap: 1.4rem;
     }
 }
+section {
+    z-index: 1;
+}
