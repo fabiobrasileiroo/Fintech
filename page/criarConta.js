@@ -199,7 +199,7 @@ let inputsCorretos = {
     confirmarSenha: false,
     cpf: false
 }
-
+/*
 btnSubmit.addEventListener("click", (e)=> {
     if(inputsCorretos.username == false || 
         inputsCorretos.email == false || 
@@ -209,5 +209,43 @@ btnSubmit.addEventListener("click", (e)=> {
         e.preventDefault()
     } else {
         alert("formulario completo envidado com sucesso")
+       window.location.href = '../Pages/dashboard.html';
     }
 })
+*/
+btnSubmit.addEventListener("click", function (e) {
+    console.log("Botão Clicado");
+
+    if (
+        !inputsCorretos.username ||
+        !inputsCorretos.email ||
+        !inputsCorretos.senha ||
+        !inputsCorretos.confirmarSenha ||
+        !inputsCorretos.cpf
+    ) {
+        e.preventDefault();
+        alert("Por favor, preencha todos os campos corretamente.");
+    } else {
+        // unicar forma que achei de entra na pagina é travando ela
+        e.preventDefault()
+        window.location.href = '../Pages/dashboard.html';
+    }
+});
+
+// se preencher o formulario ele entra no core da aplicacao
+/*
+btnSubmit.addEventListener("click", function(e) {
+    // Verificar se todos os campos estão preenchidos corretamente
+    if(inputsCorretos.username &&
+        inputsCorretos.email &&
+        inputsCorretos.senha &&
+        inputsCorretos.confirmarSenha &&
+        inputsCorretos.cpf) {
+        // Navegar para a página de destino
+        window.location.href = '../Pages/dashboard.html';
+    } else {
+        // Exibir alerta ou mensagem informando sobre campos incorretos
+        alert("Por favor, preencha todos os campos corretamente.");
+    }
+});
+*/

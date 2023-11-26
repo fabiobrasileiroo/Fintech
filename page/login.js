@@ -83,6 +83,8 @@ btnSubmit.addEventListener("click", (e)=> {
         {
         e.preventDefault()
     } else {
-        alert("formulario completo enviado com sucesso")
+        // unicar forma que achei de entra na pagina é travando ela
+        e.preventDefault()
+        window.location.href = '../Pages/dashboard.html';
     }
 })
