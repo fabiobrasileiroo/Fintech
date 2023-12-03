@@ -151,7 +151,7 @@ button:last-child {
 .sign-in__logo {
     display: grid;
     place-content: center;
-    background: url(../assets/images/texture-blue-fabric.jpg), var(--secondary-color);
+    background: url(../assets/images/bg-money-ping.jpg), var(--secondary-color);
     height: 100%;
 }
 
