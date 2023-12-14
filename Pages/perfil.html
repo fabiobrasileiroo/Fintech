@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- MATERIAL ICONS CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,0" />
+    <!-- GOOGLE FONTS (POPPINS)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- STYLESHEET-->
+    <link rel="stylesheet" href="../assets/css/dashboard-main.css">
+    <style>
+          /* PROFILE SECTION */
+        .profile-section {
+            background: var(--color-light);
+            padding: var(--card-padding);
+            border-radius: var(--card-border-radius);
+            margin-top: 2rem;
+            box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-photo-container {
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .user-details {
+            margin-left: 2rem;
+        }
+
+        .user-details h1 {
+            font-size: 2rem;
+            color: var(--color-dark);
+        }
+
+        .user-details p {
+            color: var(--color-gray-dark);
+            margin-top: 0.5rem;
+        }
+
+        /* Adicione o seu CSS existente aqui */
+
+        /* Adicione a classe "editing" quando o perfil está em modo de edição */
+        .editing form,
+        .editing #edit-profile-btn {
+            display: block;
+        }
+
+        .editing #user-name,
+        .editing #user-email,
+        .editing #user-bio,
+        .editing #edit-profile-btn {
+            display: none;
+        }
+
+        .profile-section {
+            /* ... */
+        }
+
+        /* Adicione o estilo para o botão de edição */
+        #edit-profile-btn {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Adicione estilos para os campos quando estão em modo de edição */
+        .editing input,
+        .editing textarea {
+            border: 1px solid #3498db;
+        }
+             /* Adicione o CSS conforme necessário */
+        .editing-form {
+            display: none;
+        }
+
+        .editing .editing-form {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <img src="../assets/images/logo-pig.svg" class="logo">
+            <div class="search-bar">
+                <span class="material-symbols-outlined">search</span>
+                <input type="search" placeholder="Pesquisa">
+            </div>
+            <div class="profile-area">
+                <div class="theme-btn">
+                    <span class="material-symbols-outlined active">light_mode</span>
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </div>
+                <div class="profile" >
+                    <div class="profile-photo">
+                        <img src="https://media.licdn.com/dms/image/D4D03AQH-SWM-UiriJg/profile-displayphoto-shrink_800_800/0/1688764384631?e=1706140800&v=beta&t=J6TExEfknAYojv1zkHp-N7OG3z9cJo1h48y7pifnE8M" alt="">
+                    </div>
+                        <h5>Fabio Brasileiro</h5>
+                        <span class="material-symbols-outlined">expand_more</span>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+        </div>
+    </nav>
+    <!-- END OF NAVBAR-->
+    <main>
+        <aside>
+            <button id="close-btn">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <h4>Dashboard</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">currency_exchange</span>
+                    <h4>Intercâmbio</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">account_balance_wallet</span>                    
+                    <h4>Carteira</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">payment</span>
+                    <h4>Transações</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">pie_chart</span> 
+                    <h4>Análise</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">message</span> 
+                    <h4>Mensagens</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">help_center</span> 
+                    <h4>Centro de ajuda</h4>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span> 
+                    <h4>Configurações</h4>
+                </a>
+            </div>
+            <!-- END OF SIDEBAR-->
+            <div class="updates">
+                <span class="material-symbols-outlined">update</span>
+                <h4>Atualizações disponíveis</h4>
+                <p>Atualizações de segurança</p>
+                <p>Atualizações gerais</p>
+                <a href="#">Atualizar agora</a>
+            </div>
+        </aside>
+        <!------------------- END OF ASIDE -------------------->
+        <section class="profile-section">
+            <div class="profile-info">
+                <div class="profile-photo-container">
+                    <img class="profile-photo" id="userPhoto" src="https://media.licdn.com/dms/image/D4D03AQH-SWM-UiriJg/profile-displayphoto-shrink_800_800/0/1688764384631?e=1706140800&v=beta&t=J6TExEfknAYojv1zkHp-N7OG3z9cJo1h48y7pifnE8M" alt="Nome do Usuário">
+                    <input type="file" id="photoInput" accept="image/*" style="display: none">
+                    <label for="photoInput" class="edit-icon">&#9998;</label>
+                </div>
+                <div class="user-details">
+                <h1 id="user-name">Nome do Usuário</h1>
+                <p id="user-email">Email: usuario@email.com</p>
+                <p id="user-bio">Biografia: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button id="edit-profile-btn">Editar Perfil</button>
+                <form id="profile-form">
+                    <label for="new-name">Novo Nome:</label>
+                    <input type="text" id="new-name" name="new-name" required>
+
+                    <label for="new-email">Novo Email:</label>
+                    <input type="email" id="new-email" name="new-email" required>
+
+                    <label for="new-bio">Nova Bio:</label>
+                    <textarea id="new-bio" name="new-bio" rows="4"></textarea>
+
+                    <button type="submit">Salvar Alterações</button>
+                </form>
+            </div>
+            </div>
+            <!-- END OF FAST PAYMENT-->
+            <canvas id="chart" style="display: none;"></canvas>
+      
+
+           
+    </main>
+    <!-- ==================END OF ASIDE==================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <!-- END CHART.JS-->
+
+    <script src="../assets/scripts/main.js"></script>
+    <script>
+  
+           document.addEventListener('DOMContentLoaded', function () {
+            const changePhotoBtn = document.getElementById('photoInput');
+            const photoInput = document.getElementById('photo-input');
+            const userName = document.getElementById('user-name');
+            const userEmail = document.getElementById('user-email');
+            const userBio = document.getElementById('user-bio');
+            const editProfileBtn = document.getElementById('edit-profile-btn');
+            const newNameInput = document.getElementById('new-name');
+            const newEmailInput = document.getElementById('new-email');
+            const newBioInput = document.getElementById('new-bio');
+            const profileForm = document.getElementById('profile-form');
+
+            changePhotoBtn.addEventListener('click', function () {
+                photoInput.click();
+            });
+
+            editProfileBtn.addEventListener('click', function () {
+                document.body.classList.add('editing');
+            });
+
+            photoInput.addEventListener('change', function () {
+                const file = photoInput.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const newPhoto = e.target.result;
+                        document.querySelector('.profile-photo').src = newPhoto;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            profileForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const newName = newNameInput.value;
+                const newEmail = newEmailInput.value;
+                const newBio = newBioInput.value;
+
+                // Lógica para salvar as alterações no perfil
+                // Você pode enviar esses dados para o servidor ou armazenar localmente, dependendo das suas necessidades
+
+                userName.textContent = newName;
+                userEmail.textContent = 'Email: ' + newEmail;
+                userBio.textContent = 'Biografia: ' + newBio;
+
+                document.body.classList.remove('editing');
+                alert('Alterações salvas com sucesso!');
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            const editProfileBtn = document.getElementById('edit-profile-btn');
+            const profileForm = document.getElementById('profile-form');
+
+            editProfileBtn.addEventListener('click', function () {
+                document.body.classList.toggle('editing');
+            });
+        });
+    </script>
+    <script>
+      document.getElementById('addPaymentButton').addEventListener('click', openModal);
+
+        function openModal() {
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            document.getElementById('paymentName').value = '';
+            document.getElementById('paymentAmount').value = '';
+        }
+
+        function addFastPayment() {
+    const paymentName = document.getElementById('paymentName').value;
+    const paymentAmount = document.getElementById('paymentAmount').value;
+    const paymentStatus = document.getElementById('paymentStatus').checked;
+
+    // Adicione o pagamento rápido ao innerHTML do elemento correspondente
+    const newPaymentDiv = document.createElement('div');
+    newPaymentDiv.innerHTML = `
+        <div class="badge">
+            <span class="bg-success" style="width: 7px; height: 7px; border-radius: 50%;"></span>
+            <div>
+                <h5>${paymentName}</h5>
+                <h4>$${paymentAmount}</h4>
+            </div>
+        </div>
+    `;
+
+    // Adiciona a classe bg-success ou bg-danger com base no status do pagamento
+    if (paymentStatus) {
+        newPaymentDiv.querySelector('.bg-success').classList.add('bg-success');
+    } else {
+        newPaymentDiv.querySelector('.bg-success').classList.add('bg-danger');
+    }
+
+    document.querySelector('.badges').appendChild(newPaymentDiv);
+    closeModal();
+}
+
+    </script>
+
+</body>
+</html>
+<!--1:01:37 minutos eu parei-->

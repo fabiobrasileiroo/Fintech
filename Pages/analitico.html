@@ -13,6 +13,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- STYLESHEET-->
     <link rel="stylesheet" href="../assets/css/dashboard-main.css">
+    <style>
+        main .analyse .sales svg circle{
+    stroke: var(--color-success);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .analyse .visits svg circle{
+    stroke: var(--color-danger);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .analyse .searches svg circle{
+    stroke: var(--color-primary);
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .analyse .progresss .percentage{
+    position: absolute;
+    top: -3px;
+    left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+    </style>
 </head>
 <body>
     <nav>
@@ -97,35 +127,23 @@
             </div>
             <div class="cards">
                 <div class="card">
-                    <div class="top">
-                        <div class="left">
-                            <img src="../assets/imageDashbord/images/BTC.png" >
-                            <h2>BTC</h2>
+                 <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Sales</h3>
+                            <h1>$65,024</h1>
                         </div>
-                        <img src="../assets/imageDashbord/images/visa.png" class="right">
-                    </div>
-                    <div class="middle">
-                        <h1>$827,199</h1>
-                        <div class="chip">
-                            <img src="../assets/imageDashbord/images/card chip.png" class="chip">
-                        </div>
-                    </div>
-                    <div class="bottom">
-                        <div class="left">
-                            <small>Titular do cartão</small>
-                            <h5>JOHN DOE</h5>
-                        </div>
-                        <div class="right">
-                            <div class="expiry">
-                                <small>Valid</small>
-                                <h5>08/26</h5>
-                            </div>
-                            <div class="cvv">
-                                <small>CVV</small>
-                                <h5>129</h5>
+                        <div class="progresss ">
+                            <svg >
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
                             </div>
                         </div>
                     </div>
+                </div>    
+                
                 </div>
                 <!-- END OF CARD 1-->
                 <div class="card">
@@ -604,4 +622,4 @@
 </body>
 </html>
 <!--1:01:37 minutos eu parei-->
-<!-- ajeitar nomes badges-->
+<

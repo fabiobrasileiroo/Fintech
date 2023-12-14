@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic CRUD Example</title>
+</head>
+<body>
+
+    <h1>Item List</h1>
+
+    <ul id="item-list"></ul>
+
+    <label for="new-item">New Item:</label>
+    <input type="text" id="new-item" />
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+        // Lista inicial de itens
+        let itemList = ['Item 1', 'Item 2', 'Item 3'];
+
+        // Função para exibir a lista
+        function displayList() {
+            const listContainer = document.getElementById('item-list');
+            listContainer.innerHTML = '';
+
+            itemList.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item} - `;
+                
+                const updateBtn = document.createElement('button');
+                updateBtn.textContent = 'Update';
+                updateBtn.onclick = () => updateItem(index);
+                li.appendChild(updateBtn);
+
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.onclick = () => deleteItem(index);
+                li.appendChild(deleteBtn);
+
+                listContainer.appendChild(li);
+            });
+        }
+
+        // Função para adicionar um novo item
+        function addItem() {
+            const newItem = document.getElementById('new-item').value;
+            if (newItem) {
+                itemList.push(newItem);
+                displayList();
+                document.getElementById('new-item').value = '';
+            }
+        }
+
+        // Função para atualizar um item
+        function updateItem(index) {
+            const updatedItem = prompt('Update item:', itemList[index]);
+            if (updatedItem !== null) {
+                itemList[index] = updatedItem;
+                displayList();
+            }
+        }
+
+        // Função para excluir um item
+        function deleteItem(index) {
+            if (confirm('Are you sure you want to delete this item?')) {
+                itemList.splice(index, 1);
+                displayList();
+            }
+        }
+
+        // Exibir a lista inicial
+        displayList();
+    </script>
+
+</body>
+</html>
